@@ -1,13 +1,13 @@
 
 import React from 'react';
 
-interface NftSalesResponseProps {
+interface NftFeesResponseProps {
   sellerFeeSum: string;
   royaltyFeeSum: string;
   protocolFeeSum: string;
 }
 
-export const NftSalesResponse: React.FC<NftSalesResponseProps> = ({ sellerFeeSum, royaltyFeeSum, protocolFeeSum }) => {
+export const NftFeesResponse: React.FC<NftFeesResponseProps> = ({ sellerFeeSum, royaltyFeeSum, protocolFeeSum }) => {
   return (
     <>
       <div className=''>

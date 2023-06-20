@@ -24,6 +24,12 @@ const AddressForm: React.FC<FormProps> = ({ onSubmit, address, setAddress }) => 
         >
           getNftSales
         </button>
+        <input 
+          type="reset" 
+          value="Reset"
+          className='btn btn-secondary flex w-fit-content m-5'
+          onClick={() => setAddress('')}
+        />
       </form>
     </div>   
   );

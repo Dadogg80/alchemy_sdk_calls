@@ -19,7 +19,7 @@ export const findContractDeployer = async (address: string) => {
   return response;
 };
 
-export const getNftSales = async (address: string) => {
+export const getNftFees = async (address: string) => {
     let options = {
       contractAddress: address,
     }
@@ -47,6 +47,16 @@ export const getNftSales = async (address: string) => {
     console.log("Protocol Fees Sum:", Utils.formatEther(protocolFeeSum))
   
     return [sellerFeeSum, royaltyFeeSum, protocolFeeSum];
+  }
+export const getNftSales = async (address: string) => {
+    let options = {
+      contractAddress: address,
+    }
+  
+    let response: GetNftSalesResponse = await alchemy.nft.getNftSales(options)
+    let data = response.nftSales;
+    console.log(data)
+    return data;
   }
 
 // getNftSales("0xEAdfF826D532dB453B74AF636B04232388e7BF0e")

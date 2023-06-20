@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import { NftSalesCard } from './components/cards/NftSalesCard'
+
+import { NftFeesCard } from './components/cards/NftFeesCard'
+import NftSalesCard from './components/cards/NftSalesCard';
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
           Welcome to ALchemy SDK Calls App
         </h1>
         <NftSalesCard />
+        <NftFeesCard />
       </div>
     </main>
   )
